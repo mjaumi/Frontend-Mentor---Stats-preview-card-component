@@ -24,7 +24,6 @@ mark{
     width: 88%;
     background-color: hsl(244, 38%, 16%);
     overflow: hidden;
-    min-height: 600px;
     margin: 3.5em auto;
     border-radius: 10px;
     padding-bottom: 1.5em;
@@ -106,9 +105,11 @@ mark{
         justify-content: center;
         align-items: center;
     }
+
     .card{
         display: flex;
-        width: 70%;
+        max-width: calc(1440px - 20%);
+        min-height: 80%;
         margin: auto;
         padding-bottom: 0;
     }
@@ -126,15 +127,15 @@ mark{
     .title{
 
         text-align: left;
-        margin: 5rem 6rem 0 5rem; 
-        font-size: 30px;
+        margin: 4rem 5rem 0 4rem; 
+        font-size: 23px;
     }
 
     .text{
 
         text-align: left;
-        margin: 2em 12em 0 5rem; 
-        font-size: 18px;
+        margin: 2em 8em 0 4rem; 
+        font-size: 15px;
     }
 
     .img_container{
@@ -146,6 +147,11 @@ mark{
         -ms-flex-order: 2;
         -webkit-order: 2;
         order: 2;
+    }
+
+    .last_comp{
+
+        padding-bottom: 3rem;
     }
 
     .attribution { 
@@ -163,28 +169,36 @@ mark{
 
 }
 
-@media(min-width: 1500px){
+@media(min-width: 1440px){
+
+    .card{
+    
+        max-width: calc(1440px - 20%);
+    }
 
     .stats{
 
         display: flex;
-        margin-top: 3em;
+        margin-top: 1.5em;
+        margin-left: 4rem;
     }
 
     .stat + .stat{
 
-        margin-left: 0em;
+        margin-left: 2.5em;
     }
 
-    .number,
-    .name_text{
+    .number{
 
-        margin-left: 5rem;
         text-align: left;
+        font-size: 23px;
     }
 
     .name_text{
 
         font-family: 'Lexend Deca', sans-serif;
+        font-size: 11px;
+        text-align: left;
+        padding-bottom: 3rem;
     }
 }
